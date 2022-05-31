@@ -1,0 +1,19 @@
+OK, where to start.  I didn't have enough time to finish.  I had never used Angular or TypeScript before, so that took a majority of time on learning how to implement best for what was asked. It also seemed like I had to turn off a lot of features in TypeScript.  The type of features that seems like the basis for why TypeScript was created?  I'll have to research some more on why that is.
+
+I have Angular up and running, and the Express server working and responding via API requests, but the Angular App doesn't properly update/display items due to Type errors and nullable values.  I'm confident that I'd be able to resolve the issue with a bit more time and a few choice questions to the right people.  Not having this fully functioning in time also did not lend time for OAuth with Google.  I have implemented OAuth successfully on an Express/NodeJS app with Twitch authentication, using JWTs and cookies.
+
+Additionally, I used Cosmos DB, as that is what I have the most familiarity with (and it's quite flexible), but I didn't realize that the Emulator for local development (https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator?tabs=ssl-netstd21) doesn't have options on where to store the DB, but if running will connect and save items (tested via PostMan) to the DB.
+
+So all in all, I'd say that it's not a failure, but it's certainly not a success yet. To ensure that I provide you with the most accurate picture of what was asked in the time described, this is where I'm at.  Please let me know if you have any questions.
+
+- What are some additional features you would add to the Task Application? 
+After initial performance reviews, cleanups, and review for any documentation missing, I would add categories to be able to sort the tasks into groups.  Esentially allow users to create their own epics or projects and tasks underneath.  Beyond that, depending on need, I'd look at being able to remotely add tasks from other users that can be accepted or rejected by the authenticated user.
+    
+- Would you make any changes to your back-end if it were being used by other non-web applications? 
+I would likely create routes or alternative options that responded in non JSON responses.  I would also look at a potentially simpler solution for local database storage than Cosmos DB.  I would also look at if NodeJS is the best solution if not a webapp, and see if another solution would work better, if potentially distributing via a Store service; .Net, Swift, Java, etc.
+
+- Was there anything confusing about this code test? Would you change anything?
+I wouldn't say there was anything confusing.  Having never used Angular, I would say it was challenging.  
+I understand why it was done this way, but if I were to change something, it would likely be a bit more flexible on the layout of the code.  Allow for a bit of architecting to be done, and see how an applicant would layout the app, with them also providing details on how and why they have it laid out where it is.
+
+Well, despite not being fully functional, I hope this is good enough that I hear from you again!
