@@ -1,0 +1,33 @@
+<div>
+    <ul class="tasks">
+        <li *ngFor="let task of tasks" (click)="onSelect(task)" [class.selected]="task === selectedTask">
+            <button class="delete-button" (click)="deleteTask(task)">Complete</button>
+            <div class="task-element">
+                <div class="task-name">{{task.name}}</div>
+                <div class="task-description">{{task.description}}</div>
+            </div>
+        </li>
+    </ul>
+    <div class="editarea">
+        <button (click)="enableAddMode()">Add New Task</button>
+        <div *ngIf="selectedTask">
+            <div class="editfields">
+                <div>
+                    <label>id: </label>
+                    <input [(ngModel)]="selectedTask.id" placeholder="id" *ngIf="addingTask"/>
+                    <label *ngIf="!addingTask" class="value">{{selectedTask.id}}</label>
+                </div>
+                <div>
+                    <label>name: </label>
+                    <input [(ngModel)]="selectedTask.name" placeholder="name" />                    
+                </div>
+                <div>
+                    <label>description: </label>
+                    <input [(ngModel)]="selectedTask.description" placeholder="description" />
+                </div>
+            </div>
+            <button (click)="cancel()">Cancel</button>
+            <button (click)="save()">Save</button>
+        </div>
+    </div>
+</div>
